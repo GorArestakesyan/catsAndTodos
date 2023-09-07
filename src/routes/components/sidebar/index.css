@@ -1,0 +1,49 @@
+.sidebarContainer {
+  width: 12vw;
+  display: flex;
+  background-color: aliceblue;
+  align-items: center;
+  justify-content: center;
+}
+.categoriesContainer {
+  width: 22vw;
+}
+.eachCategory {
+  display: flex;
+  text-transform: uppercase;
+  color: rgb(0, 0, 126);
+  font-family: system-ui;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  cursor: pointer;
+}
+.eachCategory:hover {
+  color: rgb(113, 113, 255);
+  transition: ease-in-out 0.2s;
+}
+.categoryName {
+  margin: 22% 2% 22% 2%;
+  cursor: pointer;
+  text-decoration: none;
+  pointer-events: none;
+}
+.pageName {
+  color: rgb(242 0 255);
+  pointer-events: auto;
+  font-size: 20px;
+}
+@media only screen and (max-width: 1095px) {
+  .sidebarContainer {
+    width: 12vw;
+  }
+  .categoriesContainer {
+    width: fit-content;
+  }
+  .categoryName {
+    font-size: 13px;
+  }
+  .pageName {
+    font-size: 13px;
+  }
+}

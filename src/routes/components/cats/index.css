@@ -1,0 +1,39 @@
+.eachCatImg {
+  width: 200px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 9px 13px -8px;
+  border: 3px solid #00d000;
+}
+.catsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  flex-direction: revert;
+  margin: 4%;
+  width: 70vw;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+}
+.loadBtn {
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 9px;
+  background-color: #6189f4;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.loadBtn:hover {
+  background-color: #0443ef;
+  transition: ease-in-out 0.2s;
+}
+.loadBtnBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2% 0%;
+}
