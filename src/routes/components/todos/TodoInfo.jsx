@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import BackIcon from "../../../assets/svgs/BackIcon";
 import AppContext from "../../../context/AppContext";
 
 const TodoInfo = () => {
@@ -56,29 +57,32 @@ const TodoInfo = () => {
   return (
     <div className="todoInfoContainer">
       <Link to={"/todos"} title="Go back">
-        Go Back
+        <BackIcon />
       </Link>
       <div className="todosListContainer">
         {selectedTodo.todosInSomeDate.length ? (
           selectedTodo.todosInSomeDate.map((todo) => (
-            <div
-              key={todo.id}
-              className={
-                todo.completed
-                  ? "completedTodo, eachTodoItemBox"
-                  : "unCompletedTodo, eachTodoItemBox"
-              }
-            >
-              <input
-                type="checkbox"
-                checked={todo.completed}
-                onChange={(e) => handleCheckTodo(todo.id)}
-              />
-              <div className="taskTitleBox">
-                <span className="taskTitle">{todo.title}</span>
+            <React.Fragment>
+              <div className="spaceBox" />
+              <div
+                key={todo.id}
+                className={
+                  todo.completed
+                    ? "completedTodo, eachTodoItemBox"
+                    : "unCompletedTodo, eachTodoItemBox"
+                }
+              >
+                <input
+                  type="checkbox"
+                  checked={todo.completed}
+                  onChange={(e) => handleCheckTodo(todo.id)}
+                />
+                <div className="taskTitleBox">
+                  <span className="taskTitle">{todo.title}</span>
+                </div>
+                <span>{todo.createdDate}</span>
               </div>
-              <span>{todo.createdDate}</span>
-            </div>
+            </React.Fragment>
           ))
         ) : (
           <span>No todos</span>
